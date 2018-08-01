@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       client_secret=ENV["GITHUB_CLIENT_SECRET"]
       req.params["client_id"]=client_id
       req.params["client_secret"=]=client_secret
-      req.
+      req.params["code"]=code
     end
     
     
