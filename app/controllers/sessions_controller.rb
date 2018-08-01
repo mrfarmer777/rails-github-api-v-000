@@ -7,7 +7,9 @@ class SessionsController < ApplicationController
     resp=Faraday.post("https://github.com/login/oauth/access_token") do |req|
       client_id=ENV["GITHUB_CLIENT_ID"]
       client_secret=ENV["GITHUB_CLIENT_SECRET"]
-      req.body="{'client_id': #{client_id}, 'client_secret':#{client_secret}, 'code': #{code}}"
+      req.params["client_id"]=client_id
+      req.params["client_secret"=]=client_secret
+      req.
     end
     
     
